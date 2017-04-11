@@ -25,12 +25,12 @@
         android:text="Enter Your Full Name" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/editTextProfession"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter Your Password" />
+        android:text="Enter Your Profession" />
 
     <LinearLayout
         android:layout_width="match_parent"
