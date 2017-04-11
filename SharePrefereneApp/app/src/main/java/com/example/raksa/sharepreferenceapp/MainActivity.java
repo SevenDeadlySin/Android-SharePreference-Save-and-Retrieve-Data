@@ -1,6 +1,7 @@
 package com.example.raksa.sharepreferenceapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("PRO_ID",516);
         editor.apply();/// Can use commit(); method too.. but commit() will return the boolean..
 
+
+        // for Application Level
+        SharedPreferences anotherSharePreferences = getSharedPreferences(getPackageName()+"USER_PROFILE",Context.MODE_PRIVATE);
+        SharedPreferences.Editor anotherEditor = anotherSharePreferences.edit();
+        anotherEditor.putString("FULLNAME1",fullName);
+        anotherEditor.putString("PROFESSION1",profession);
+        anotherEditor.putInt("PRO_ID1",538);
+        anotherEditor.apply();
+
     }
 
     public void onLoadButton(View view) {
@@ -68,5 +78,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OnOpenSecondActivityButton(View view) {
+
+        Intent secondActivityIntent = new Intent(this,SecondActivity.class);
+        startActivity(secondActivityIntent);
     }
 }

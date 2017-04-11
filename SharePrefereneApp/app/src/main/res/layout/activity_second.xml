@@ -18,21 +18,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Load" />
+            android:text="Load"
+            android:onClick="onLoadButton"/>
 
         <Button
             android:id="@+id/buttonClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Clear" />
+            android:text="Clear"
+            android:onClick="onClearButton"/>
 
         <Button
             android:id="@+id/buttonRemove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Remove" />
+            android:text="Remove"
+            android:onClick="onRemoveButton"/>
     </LinearLayout>
 
     <TextView
